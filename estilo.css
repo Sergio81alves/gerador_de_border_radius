@@ -1,0 +1,16 @@
+
+
+.four_inputs{
+    margin-bottom: 20px;
+}
+.caixa{
+    width: 250px;
+    height: 200px;
+    background-color: aqua;
+    margin: auto;
+    border-top-left-radius: 1px;
+}
+.copiando{
+    display: none;
+    
+}
