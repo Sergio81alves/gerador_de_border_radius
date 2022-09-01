@@ -36,28 +36,21 @@ document.getElementById('inferior_direito').style.border ='2px outset lime'
 
 //copiar para a area de transferencia
 function copiando() {
-  
+ 
+  let num1 = document.getElementById('superior_esquerdo').value 
+  let num2 = document.getElementById('superior_direito').value
+  let num3 = document.getElementById('inferior_esquerdo').value
+  let num4 =  document.getElementById('inferior_direito').value
+ 
   var copyText = document.getElementById("superior_esquerdo");
-  var ct = document.getElementById("superior_direito");
-  var ie = document.getElementById("inferior_esquerdo");
-  var id = document.getElementById("inferior_direito");
   
   copyText.select();
   copyText.setSelectionRange(0, 99999);
-  ct.select();
-  ct.setSelectionRange(0,99999);
-  ie.select();
-  ie.setSelectionRange(0,99999);
-  id.select();
-  id.setSelectionRange(0,99999);
 
-  //navigator.clipboard.writeText(copyText.value, ct, ie, id);
-  //navigator.clipboard.writeText(ct.value);
- // navigator.clipboard.writeText(ie.value);
- // navigator.clipboard.writeText(id.value);
-    
-  alert("border-radius: " + copyText.value + ' ' + ct.value + ' ' + ie.value + 
-  ' ' + id.value + ';');
-  navigator.clipboard.writeText("border-radius: ", copyText.value, ' ', ct.value, ' ', ie.value, 
-  ' ', id.value, ';')
+  navigator.clipboard.writeText("border-radius: "+ num1 + ' ' + num2 + ' ' + num3 + 
+  ' ' + num4 +  ';')
+
+  alert("border-radius: " + copyText.value + ' ' + num2 + ' ' + num3 + 
+  ' ' + num4 + ';');
+
 }
